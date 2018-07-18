@@ -25,7 +25,7 @@ namespace WebService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddSingleton<IDataRetriever>(new GiHubGrapthQlDataRetriever.GiHubGrapthQlDataRetriever(
+            services.AddSingleton<IDataRetriever>(new GitHubGrapthQlDataRetriever.GitHubGrapthQlDataRetriever(
                 user: Configuration.GetSection("Git")["User"],
                 tokenFunc: () => TokenProvider.Token));
             services.AddLogging();

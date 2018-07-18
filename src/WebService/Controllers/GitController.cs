@@ -66,7 +66,7 @@ namespace WebService.Controllers
             if (!string.IsNullOrEmpty(res.Error))
                 return StatusCode(500, res.Error);
 
-            _logger.LogInformation($"Search users by user {user}");
+            _logger.LogInformation($"Search users by login {user}");
             return Ok(res);
         }
 

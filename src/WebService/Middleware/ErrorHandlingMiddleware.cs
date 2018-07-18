@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -11,7 +9,7 @@ namespace WebService.Middleware
 {
     public class ErrorHandlingMiddleware
     {
-        private readonly RequestDelegate next;
+        private readonly RequestDelegate _next;
         private static ILogger<ErrorHandlingMiddleware> _logger;
 
         public ErrorHandlingMiddleware(ILogger<ErrorHandlingMiddleware> logger)
@@ -21,7 +19,7 @@ namespace WebService.Middleware
 
         public ErrorHandlingMiddleware(RequestDelegate next)
         {
-            this.next = next;
+            this._next = next;
         }
 
         public async Task Invoke(HttpContext context, ILogger<ErrorHandlingMiddleware> logger)
@@ -29,7 +27,7 @@ namespace WebService.Middleware
             _logger = logger;
             try
             {
-                await next(context);
+                await _next(context);
             }
             catch (Exception ex)
             {

@@ -2,7 +2,7 @@
   "profiles": {
     "Util": {
       "commandName": "Project",
-      "commandLineArgs": "Location torvalds 10 3"
+      "commandLineArgs": "Location torvalds 3 3"
     }
   }
 }

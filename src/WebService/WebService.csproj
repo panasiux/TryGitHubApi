@@ -27,7 +27,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj" />
-    <ProjectReference Include="..\DataRetriever\GiHubGrapthQlDataRetriever.csproj" />
+    <ProjectReference Include="..\DataRetriever\GitHubGrapthQlDataRetriever.csproj" />
     <ProjectReference Include="..\Declarations\Declarations.csproj" />
   </ItemGroup>
 

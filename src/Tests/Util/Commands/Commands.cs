@@ -9,14 +9,14 @@ namespace Util.Commands
 {
 	public class Commands
 	{
-	    private readonly GiHubGrapthQlDataRetriever.GiHubGrapthQlDataRetriever _dataRetriever;
+	    private readonly GitHubGrapthQlDataRetriever.GitHubGrapthQlDataRetriever _dataRetriever;
 
         public Commands()
         {
             IConfiguration configuration = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json", true, true)
                 .Build();
-            _dataRetriever = new GiHubGrapthQlDataRetriever.GiHubGrapthQlDataRetriever(configuration["user"], TokenProvider.Token);
+            _dataRetriever = new GitHubGrapthQlDataRetriever.GitHubGrapthQlDataRetriever(configuration["user"], TokenProvider.Token);
         }
 
         public async Task Location(string user, int depth, int amount)

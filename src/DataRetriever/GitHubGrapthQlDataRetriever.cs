@@ -13,19 +13,21 @@ using GraphQL.Client;
 using GraphQL.Common.Request;
 using GraphQL.Common.Response;
 
-namespace GiHubGrapthQlDataRetriever
+namespace GitHubGrapthQlDataRetriever
 {
-    public class GiHubGrapthQlDataRetriever : IDataRetriever
+    public class GitHubGrapthQlDataRetriever : IDataRetriever
     {
         private const string GitHubApiPath = "https://api.github.com/graphql";
         private GraphQLClient _graphQlClient;
         private readonly string _user;
         private readonly Func<string> _tokenFunc;
 
-        public GiHubGrapthQlDataRetriever(string user, string token)
+        public GitHubGrapthQlDataRetriever(string user, string token)
         {
+            if(string.IsNullOrEmpty(user) || string.IsNullOrEmpty(user))
+                throw new ApplicationException($"User and token should be specified: user={user}, token={token}");
             _user = user;
-
+            
             CheckClient(token);
         }
 
@@ -41,7 +43,7 @@ namespace GiHubGrapthQlDataRetriever
             }
         }
 
-        public GiHubGrapthQlDataRetriever(string user, Func<string> tokenFunc)
+        public GitHubGrapthQlDataRetriever(string user, Func<string> tokenFunc)
         {
             _user = user;
             _tokenFunc = tokenFunc;
