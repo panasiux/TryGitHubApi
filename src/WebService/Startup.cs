@@ -2,6 +2,7 @@
 using Common;
 using Declarations.Interfaces.Query;
 using GiHubGrapthQlDataRetriever;
+using GitHubGrapthQlDataRetriever;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

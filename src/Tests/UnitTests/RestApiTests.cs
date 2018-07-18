@@ -8,6 +8,7 @@ using Declarations;
 using Declarations.DomainModel;
 using Declarations.Interfaces.Query;
 using GiHubGrapthQlDataRetriever;
+using GitHubGrapthQlDataRetriever;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;

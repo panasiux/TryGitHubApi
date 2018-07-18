@@ -2,7 +2,7 @@
 using Declarations.DomainModel;
 using GiHubGrapthQlDataRetriever.Docs;
 
-namespace GiHubGrapthQlDataRetriever
+namespace GitHubGrapthQlDataRetriever
 {
     public class AutoMapperRepoProfile : Profile
     {
