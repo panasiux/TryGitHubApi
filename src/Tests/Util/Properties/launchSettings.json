@@ -2,7 +2,7 @@
   "profiles": {
     "Util": {
       "commandName": "Project",
-      "commandLineArgs": "search city abc"
+      "commandLineArgs": "Location torvalds 10 3"
     }
   }
 }

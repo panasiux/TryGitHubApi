@@ -1,10 +1,9 @@
-using System.Threading.Tasks;
 using Common;
-using NUnit.Framework;
+using Xunit;
+using Assert = NUnit.Framework.Assert;
 
 namespace GiHubGrapthQlDataRetrieverTests
 {
-	[TestFixture]
     public class Tests
     {
 	    private readonly GiHubGrapthQlDataRetriever.GiHubGrapthQlDataRetriever _dataRetriever;
@@ -14,11 +13,11 @@ namespace GiHubGrapthQlDataRetrieverTests
 		    _dataRetriever = new GiHubGrapthQlDataRetriever.GiHubGrapthQlDataRetriever("panasiux", TokenProvider.Token);
 	    }
 
-        [Test]
-        public void SmokeTest()
+        [Fact]
+        public async System.Threading.Tasks.Task SmokeTestAsync()
         {
-	        var res = _dataRetriever.GetRepositoriesByCity("stockholm").Result;
-			Assert.NotNull(res);
+	        var res = await _dataRetriever.GetRepositoriesByCity("stockholm");
+			Assert.NotNull(res.Value);
 		}
     }
 }

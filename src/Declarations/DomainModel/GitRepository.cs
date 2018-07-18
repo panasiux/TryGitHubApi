@@ -1,6 +1,8 @@
-﻿namespace Declarations.DomainModel
+﻿using Declarations.Interfaces.DomainEntities;
+
+namespace Declarations.DomainModel
 {
-    public class GitRepository : IDomainEntity
+    public class GitRepository : IDomainEntity, IGitRepository
     {
 		public string Name { set; get; }
         public string Description { set; get; }

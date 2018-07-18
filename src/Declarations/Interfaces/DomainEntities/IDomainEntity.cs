@@ -1,4 +1,4 @@
-﻿namespace Declarations.DomainModel
+﻿namespace Declarations.Interfaces.DomainEntities
 {
     public interface IDomainEntity
     {
