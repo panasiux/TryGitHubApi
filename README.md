@@ -29,3 +29,7 @@ http://localhost:5000/api/git/repos/berlin
 ```http
 http://localhost:5000/api/git/repos/info/torvalds
 ```
+
+## Util
+Utility provided to run query without running web service
+run 'dotnet Util.dll Location torvalds 5 2' from 'src\Tests\Util\bin\Debug\netcoreapp2.0' to perform 'recursive' user search. Parameters: user, depth, amount
