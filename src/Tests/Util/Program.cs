@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using CommandDotNet;
-using GiHubGrapthQlDataRetriever;
 using GitHubGrapthQlDataRetriever;
 
 namespace Util

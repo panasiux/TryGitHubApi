@@ -1,6 +1,6 @@
 ﻿using Declarations.Interfaces.DomainEntities;
 
-namespace GiHubGrapthQlDataRetriever.Docs
+namespace GitHubGrapthQlDataRetriever.Docs
 {
     public class UserDoc : IGitUser
     {

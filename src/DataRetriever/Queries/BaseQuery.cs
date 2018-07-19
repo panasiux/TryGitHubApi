@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace GiHubGrapthQlDataRetriever.Queries
+namespace GitHubGrapthQlDataRetriever.Queries
 {
     public abstract class BaseQuery
     {

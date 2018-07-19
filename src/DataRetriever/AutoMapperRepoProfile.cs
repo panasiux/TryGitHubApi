@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Declarations.DomainModel;
-using GiHubGrapthQlDataRetriever.Docs;
+using GitHubGrapthQlDataRetriever.Docs;
 
 namespace GitHubGrapthQlDataRetriever
 {

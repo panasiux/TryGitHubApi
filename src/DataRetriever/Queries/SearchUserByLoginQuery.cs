@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GiHubGrapthQlDataRetriever.Queries
+namespace GitHubGrapthQlDataRetriever.Queries
 {
     public class SearchUserByLoginQuery : BaseQuery
     {

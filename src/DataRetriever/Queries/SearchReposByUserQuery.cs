@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using GiHubGrapthQlDataRetriever.Queries;
 
 namespace GitHubGrapthQlDataRetriever.Queries
 {

@@ -7,7 +7,6 @@ using Common;
 using Declarations;
 using Declarations.DomainModel;
 using Declarations.Interfaces.Query;
-using GiHubGrapthQlDataRetriever;
 using GitHubGrapthQlDataRetriever;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -16,22 +15,20 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using WebService.Middleware;
 using Xunit;
 
 namespace UnitTests
 {
     public class RestApiTests
     {
-        private readonly TestServer _server;
         private readonly HttpClient _client;
 
         public RestApiTests()
         {
-            _server = new TestServer(new WebHostBuilder()
+            var server = new TestServer(new WebHostBuilder()
                 .UseStartup<Startup>());
 
-            _client = _server.CreateClient();
+            _client = server.CreateClient();
         }
 
         [Fact]
