@@ -32,7 +32,7 @@ namespace Util.Commands
 
                 PrintUser(data.Value, 0);
             }
-            catch (NoTokenException e)
+            catch (NoTokenException)
             {
                 Console.WriteLine("No token found. Please add it to environment variables or by using this util");
             }

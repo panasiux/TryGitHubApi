@@ -9,6 +9,7 @@ using Declarations.DomainModel;
 using Declarations.Interfaces.Query;
 using GiHubGrapthQlDataRetriever.Docs;
 using GiHubGrapthQlDataRetriever.Queries;
+using GitHubGrapthQlDataRetriever.Queries;
 using GraphQL.Client;
 using GraphQL.Common.Request;
 using GraphQL.Common.Response;
@@ -116,7 +117,7 @@ namespace GitHubGrapthQlDataRetriever
             if (ErrorExists(graphQlResponse, ret))
                 return ret;
 
-            for (var i = 0; i < graphQlResponse.Data["search"]["edges"].Count; ++i)
+            for (var i = 0; i < graphQlResponse.Data["search"]["edges"].Count;)
             {
                 ret.Value = BuildUser(graphQlResponse.Data["search"]["edges"][i]["node"]);
                 return ret;

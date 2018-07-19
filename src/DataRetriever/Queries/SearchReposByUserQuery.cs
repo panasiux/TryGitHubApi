@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using GiHubGrapthQlDataRetriever.Queries;
 
-namespace GiHubGrapthQlDataRetriever.Queries
+namespace GitHubGrapthQlDataRetriever.Queries
 {
     public class SearchReposByUserQuery : BaseQuery
     {
